@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        .form-container h1 {
+            margin-bottom: 20px;
+        }
+        .form-container .btn-submit {
+            background-color: #28a745;
+            border-color: #28a745;
+            width: 100%;
+            height: 50px;
+            font-size: 18px;
+        }
+        .form-container .btn-submit:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="form-container">
+        <h1 class="text-center mb-5">
+            Заполните  форму
+        </h1>
+        <form data-form>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input name="email" type="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Имя</label>
+                <input name="firstName" type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Фамилия</label>
+                <input name="lastName" type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Ник</label>
+                <input name="nickname" type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Пароль</label>
+                <input name="password" type="password" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Select an option</label>
+                <select name="option" class="form-select" required>
+                    <option value="1">Вопрос 1</option>
+                    <option value="2">Вопрос 2</option>
+                    <option value="3">Вопрос 3</option>
+                    <option value="4">Вопрос 4</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Введите вопрос</label>
+                <textarea
+                        class="form-control"
+                        placeholder="Вопрос"
+                        style="height: 100px"
+                        name="message"
+                ></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Прикрепить файл</label>
+                <input name="file" class="form-control" type="file">
+            </div>
+            <div class="mb-3 form-check">
+                <input name="terms" type="checkbox" class="form-check-input">
+                <label class="form-check-label">Соглашаюсь с условиями сервиса</label>
+            </div>
+            <button type="submit" class="btn btn-submit">Отправить</button>
+        </form>
+    </div>
+</main>
+
+<script src="./js/script.js"></script>
+</body>
+</html>
